@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+}
+.star{
+    margin: 4em 0;
+    position: relative;
+    display: block;
+    width: 0em;
+    height: 0em;
+
+    border-right: 6.25em solid transparent;
+    border-bottom: 4.3em solid red;
+    border-left: 6.25em solid transparent;
+    transform: rotate(35deg);
+}
+.star::before{
+    content: "";
+    display: block;
+    border-bottom: 5em solid red;
+    border-left: 2em solid transparent;
+    border-right: 2em solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    transform: rotate(-35deg);
+    top: -45px;
+    left: -65px;
+}
+.star::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-right: 6.25em solid transparent;
+    border-left: 6.25em solid transparent;
+    border-bottom: 4.3em solid red;
+    transform: rotate(-70deg);
+    position: absolute; 
+    top: 3px; 
+    left: -105px;
+}
+
+.diamond {
+    margin: 1rem;
+    width: 0;
+    height: 0;
+    position: relative;
+    border: 5em solid transparent;
+    border-bottom-color: red;
+}
+.diamond::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: 5em solid transparent;
+    border-bottom-color: red;
+    transform: rotate(180deg);
+    position: absolute;
+    top: 5em;
+    left: -5em;
+}
+.flag {
+    background-color: red;
+    width: 250px;
+    height: 200px;
+    margin: 6rem 2rem;
+    position: relative;
+}
+.flag::before {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    background-color: white;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.flag::after {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    height: 125px;
+    width: 125px;
+    background-color: red;
+    position: absolute;
+    top: 33px;
+    left: 48px;
+}

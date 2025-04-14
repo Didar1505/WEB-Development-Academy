@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container {
+    background-color: rgb(189, 0, 0);
+    width: 600px;
+    height: 420px;
+    position: relative;
+}
+.line_blue {
+    background-color: rgb(37, 37, 122);
+    height: 220px;
+    width: 100%;
+    position: absolute;
+    bottom: 100px;
+    top: 100px;
+}
+.circle {
+    background-color: white;
+    width: 160px;
+    height: 160px;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 60px;
+    position: relative;
+    top: 30px;
+    left:220px;
+}
+
+.container > h1
+{
+    color: white;
+    font-size:60px;
+    text-align: center;
+}
