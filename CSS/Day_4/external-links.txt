@@ -7,3 +7,5 @@ https://tastybasics.nl
 
 004 MDN-Docs-Media-Query
 https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
+
+https://code.mu/ru/markup/book/prime/block-model/block-elements/
