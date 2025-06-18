@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Calculator</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td, th {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="product-input">Product Name</label>
+    <input type="text" name="" id="product-input">
+    <br>
+    <label for="price-input">Price</label>
+    <input type="number" name="" id="price-input">
+    <br>
+    <button id="add-button">Add</button>
+    <hr>
+    <table id="table">
+        <tr>
+            <th>№</th>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td id="product-name">Banana</td>
+            <td id="price">12$</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td id="product-name">Apple</td>
+            <td id="price">9$</td>
+        </tr>
+    </table>
+<hr>
+    <button id="total-btn">Calculate total</button>
+    <h3>Total: <span id="total">10</span>$</h3>
+    <script src="script.js"></script>
+</body>
+
+</html>

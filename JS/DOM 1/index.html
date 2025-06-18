@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практика по JS DOM</title>
+    <style>
+        body { font-family: sans-serif; max-width: 800px; margin: 20px auto; }
+        .task-block { border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; border-radius: 5px; }
+        .highlight { background-color: yellow; }
+        .completed { text-decoration: line-through; color: grey; }
+        img { max-width: 200px; }
+    </style>
+</head>
+<body>
+
+    <h1>Практика по JavaScript DOM</h1>
+
+    <!-- Блок для Задания 1 -->
+    <div class="task-block">
+        <h2>Задание 1: Поиск и выбор элементов</h2>
+        <p id="first-paragraph">Это первый параграф.</p>
+        <p class="content-text">Это параграф с классом.</p>
+        <p class="content-text">Это еще один параграф с тем же классом.</p>
+        <a href="https://example.com" id="link">Это ссылка</a>
+    </div>
+
+    <!-- Блок для Задания 2 -->
+    <div class="task-block">
+        <h2>Задание 2: Изменение содержимого и атрибутов</h2>
+        <h3 id="change-me">Измени мой текст!</h3>
+        <img id="image" src="https://via.placeholder.com/150" alt="placeholder">
+    </div>
+
+    <!-- Блок для Задания 3 -->
+    <div class="task-block">
+        <h2>Задание 3: Работа со стилями</h2>
+        <div id="style-box" style="width: 150px; height: 150px; border: 2px solid black; background-color: lightblue;"></div>
+        <br>
+        <button id="style-button">Изменить стиль</button>
+    </div>
+
+    <!-- Блок для Задания 4 -->
+    <div class="task-block">
+        <h2>Задание 4: Обработка событий</h2>
+        <button id="event-button">Нажми меня!</button>
+        <input type="text" id="text-input" placeholder="Введи текст сюда">
+        <p>Вы вводите: <span id="output-text"></span></p>
+    </div>
+
+    <!-- Блок для Задания 5 -->
+    <div class="task-block">
+        <h2>Задание 5: Создание и удаление элементов</h2>
+        <ul id="item-list">
+            <li>Первый элемент</li>
+        </ul>
+        <button id="add-item-button">Добавить элемент</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

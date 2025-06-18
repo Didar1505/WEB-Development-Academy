@@ -1,0 +1,8 @@
+Счетчик
+https://www.jisan.io/dom-projects/projects/counter/
+
+Калькулятор
+https://www.jisan.io/dom-projects/projects/basic-calculator/
+
+Калькулятор 2
+https://www.jisan.io/dom-projects/projects/normal-calculator/
