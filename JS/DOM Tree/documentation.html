@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учебник по JavaScript DOM: Семейное древо</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Source+Code+Pro:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            /* slate-50 */
+        }
+
+        .font-code {
+            font-family: 'Source Code Pro', monospace;
+        }
+
+        /* Family Tree Styles */
+        .family-tree ul {
+            position: relative;
+            padding-top: 20px;
+            transition: all 0.5s;
+            display: flex;
+            justify-content: center;
+        }
+
+        .family-tree li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            list-style-type: none;
+            position: relative;
+            padding: 20px 5px 0 5px;
+            transition: all 0.5s;
+        }
+
+        .family-tree li::before,
+        .family-tree li::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 50%;
+            border-top: 2px solid #94a3b8;
+            /* slate-400 */
+            width: 50%;
+            height: 20px;
+        }
+
+        .family-tree li::after {
+            right: auto;
+            left: 50%;
+            border-left: 2px solid #94a3b8;
+        }
+
+        .family-tree li:only-child::after,
+        .family-tree li:only-child::before {
+            display: none;
+        }
+
+        .family-tree li:only-child {
+            padding-top: 0;
+        }
+
+        .family-tree li:first-child::before,
+        .family-tree li:last-child::after {
+            border: 0 none;
+        }
+
+        .family-tree li:last-child::before {
+            border-right: 2px solid #94a3b8;
+            border-radius: 0 5px 0 0;
+        }
+
+        .family-tree li:first-child::after {
+            border-radius: 5px 0 0 0;
+        }
+
+        .family-tree ul ul::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            border-left: 2px solid #94a3b8;
+            width: 0;
+            height: 20px;
+        }
+
+        .person {
+            border: 2px solid #cbd5e1;
+            /* slate-300 */
+            padding: 8px 16px;
+            background-color: #ffffff;
+            color: #1e293b;
+            /* slate-800 */
+            font-size: 14px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            min-width: 80px;
+            text-align: center;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mx-auto p-4 sm:p-6 lg:p-8">
+        <header class="text-center mb-8">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-800">Манипуляции с DOM: Учебник на примере семейного древа</h1>
+            <p class="mt-2 text-lg text-slate-600">Практическое руководство по взаимодействию с DOM с помощью JavaScript.</p>
+        </header>
+
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Left Column: Instructions and Exercises -->
+            <div class="lg:w space-y-6">
+
+                <!-- Core Concepts -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border">
+                    <h2 class="text-2xl font-bold text-slate-700 mb-4">Основные концепции</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="font-semibold text-lg">1. Выбор элементов</h3>
+                            <p class="text-slate-600">Чтобы что-то изменить, сначала нужно это выбрать. Мы присвоили каждому человеку `id`, чтобы упростить задачу. Используйте `document.getElementById('elementId')`.</p>
+                            <pre
+                                class="bg-slate-100 p-2 mt-2 rounded font-code text-sm">const adamElement = document.getElementById('adam');</pre>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg">2. Обход (Перемещение между элементами)</h3>
+                            <ul class="list-disc list-inside text-slate-600 space-y-1 mt-2">
+                                <li><code class="font-code bg-slate-100 p-1 rounded">.parentElement</code>: Переходит к прямому родительскому контейнеру.</li>
+                                <li><code class="font-code bg-slate-100 p-1 rounded">.children</code>: Получает список всех дочерних элементов.</li>
+                                <li><code class="font-code bg-slate-100 p-1 rounded">.nextElementSibling</code>: Переходит к следующему соседнему элементу.</li>
+                                <li><code class="font-code bg-slate-100 p-1 rounded">.previousElementSibling</code>: Переходит к предыдущему соседнему элементу.</li>
+                            </ul>
+                            <p class="text-slate-500 text-sm mt-2">Примечание: Мы используем `ElementSibling` вместо `Sibling`, чтобы игнорировать текстовые узлы с пробелами, которые могут создавать трудности.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg">3. Манипуляция (Изменение древа)</h3>
+                            <ul class="list-disc list-inside text-slate-600 space-y-1 mt-2">
+                                <li><code class="font-code bg-slate-100 p-1 rounded">document.createElement('div')</code>: Создаёт новый элемент (но пока не размещает его).</li>
+                                <li><code class="font-code bg-slate-100 p-1 rounded">element.appendChild(newElement)</code>: Добавляет `newElement` как дочерний элемент для `element`.</li>
+                                <li><code class="font-code bg-slate-100 p-1 rounded">element.remove()</code>: Удаляет элемент со страницы.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
