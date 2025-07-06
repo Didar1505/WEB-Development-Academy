@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #password:valid {
+            background-color: palegreen;
+        }
+        #password:invalid {
+            background-color: lightpink;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form action="" name="login-form">
+        <input type="text" name="password" id="password" placeholder="Password"
+        pattern="^(?=.*\d)(?=.*[A-Z])(?=.*[\._!?#@]).{8,}$"
+        required>
+        <input type="checkbox" id="cb-show-pass" name="cb-show-pass">
+        <input type="submit">
+        <ul>
+            <li>The password should at least contain 8 characters</li>
+            <li>The password should at least contian one Upper case letter</li>
+            <li>The password should at least contian one Number</li>
+            <li>The password should at least contian the following chars (. _ ! ? @)</li>
+        </ul>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,6 +1,23 @@
-CSS/Day_1/
-CSS/Day_2/
-CSS/Day_3/
-CSS/Day_4/
-CSS/Day_5/
-CSS/Day_6/
+# Ignore common presentation files
+*.ppt
+*.pptx
+
+# Ignore common archive files
+*.zip
+*.rar
+
+# Ignore common document files
+*.pdf
+
+# Ignore common image files
+*.png
+*.jpg
+
+# Ignore all files with these extensions in any directory
+**/*.ppt
+**/*.pptx
+**/*.zip
+**/*.rar
+**/*.pdf
+**/*.png
+**/*.jpg

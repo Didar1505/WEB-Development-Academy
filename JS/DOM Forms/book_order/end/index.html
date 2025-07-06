@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Order Page</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Link to our custom stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="main-container">
+
+        <div class="page-wrapper">
+            <!-- Left Section: Book Listings -->
+            <section class="book-listings">
+                <h1>Available Books</h1>
+                <div id="book-list" class="book-grid">
+
+                    <!-- Book Card 1 -->
+                    <article class="book-card" data-title="Learning JavaScript" data-price="16">
+                        <img src="https://placehold.co/600x800/3498db/ffffff?text=Learning%0AJavaScript" alt="Cover of Learning JavaScript">
+                        <div class="card-body">
+                            <h2 class="book-title">Learning JavaScript</h2>
+                            <p class="book-author">by Ethan Brown</p>
+                        </div>
+                        <div class="card-footer">
+                            <p class="book-price">$16</p>
+                            <button class="btn select-btn">Select</button>
+                        </div>
+                    </article>
+
+                    <!-- Book Card 2 -->
+                    <article class="book-card" data-title="You Don't Know JS" data-price="20">
+                        <img src="https://placehold.co/600x800/f1c40f/000000?text=You+Don't%0AKnow+JS" alt="Cover of You Don't Know JS">
+                        <div class="card-body">
+                            <h2 class="book-title">You Don't Know JS</h2>
+                            <p class="book-author">by Kyle Simpson</p>
+                        </div>
+                        <div class="card-footer">
+                            <p class="book-price">$20</p>
+                            <button class="btn select-btn">Select</button>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Right Section: Order Form -->
+            <section class="order-details">
+                <h1>Place Your Order</h1>
+                <form id="order-form">
+                    <div class="form-group">
+                        <label for="book">Selected Book:</label>
+                        <input type="text" id="book" name="book" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Delivery Address:</label>
+                        <textarea id="address" name="address" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Delivery Date:</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment">Comment (optional):</label>
+                        <input type="text" id="comment" name="comment">
+                    </div>
+                    
+                    <button type="submit" id="buy-btn" class="btn btn-primary" disabled>Add to Cart</button>
+                </form>
+            </section>
+        </div>
+
+        <!-- Shopping Cart Section -->
+        <section id="cart-section" class="cart-container">
+            <h2>Your Shopping Cart</h2>
+            <div id="cart-items-container">
+                <!-- Items will be added here by JavaScript -->
+                <p id="empty-cart-message">Your cart is currently empty.</p>
+            </div>
+            <div class="cart-summary">
+                <p>Total: <span id="cart-total">$0.00</span></p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

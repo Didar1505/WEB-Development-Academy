@@ -1,0 +1,156 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #007bff; /* A nice blue for focus and buttons */
+    --primary-hover: #0056b3;
+    --text-color: #343a40;
+    --label-color: #495057;
+    --background-color: #f8f9fa; /* Light grey background */
+    --form-background: #ffffff;
+    --border-color: #ced4da;
+    --input-background: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.5;
+    /* Center the form vertically and horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+/* --- Form Container --- */
+.form-container {
+    background-color: var(--form-background);
+    width: 100%;
+    max-width: 500px;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.form-title {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+/* --- Form Groups and Inputs --- */
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group-inline {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#password-requirements {
+    list-style: none;
+    margin: 20px 0;
+    font-size: 12px;
+}
+
+label, .group-label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--label-color);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    background-color: var(--input-background);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input::placeholder {
+    color: #adb5bd;
+}
+
+/* Style for input focus state */
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+/* --- Special Controls: Radio and Checkbox --- */
+.radio-group {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 1rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Make radio and checkbox labels not take up the full block width */
+.radio-option label,
+.form-group-inline label {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    /* Use accent-color for modern browsers to easily style the check/dot */
+    accent-color: var(--primary-color);
+    width: 1.15em;
+    height: 1.15em;
+}
+
+/* --- Submit Button --- */
+.btn-submit {
+    width: 100%;
+    padding: 0.85rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: var(--primary-hover);
+}
