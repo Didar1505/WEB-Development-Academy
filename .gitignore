@@ -10,7 +10,6 @@
 *.pdf
 
 # Ignore common image files
-*.png
 *.jpg
 
 # Ignore all files with these extensions in any directory
@@ -19,5 +18,4 @@
 **/*.zip
 **/*.rar
 **/*.pdf
-**/*.png
 **/*.jpg

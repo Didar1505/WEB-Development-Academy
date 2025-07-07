@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleAddToCart(event) {
         // Prevent the form from doing its default action (reloading the page).
         event.preventDefault();
-
+        
         // Safety check: if no book is selected, do nothing.
         if (!selectedBook) {
             alert("Please select a book first!");
