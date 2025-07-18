@@ -1,0 +1,64 @@
+{
+  "students": [
+      {
+        "id": 1,
+        "name": "Bob Smith",
+        "age": 15,
+        "gradeLevel": 9,
+        "subjects": [
+          {"name": "Math", "score": 70},
+          {"name": "Science", "score": 65},
+          {"name": "History", "score": 80},
+          {"name": "English", "score": 75}
+        ]
+      },
+    {
+      "id": 2,
+      "name": "Alice Johnson",
+      "age": 16,
+      "gradeLevel": 10,
+      "subjects": [
+        {"name": "Math", "score": 85},
+        {"name": "Science", "score": 90},
+        {"name": "History", "score": 78},
+        {"name": "English", "score": 92}
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Clara Davis",
+      "age": 17,
+      "gradeLevel": 11,
+      "subjects": [
+        {"name": "Math", "score": 95},
+        {"name": "Science", "score": 88},
+        {"name": "History", "score": 85},
+        {"name": "English", "score": 90}
+      ]
+    },
+    {
+      "id": 4,
+      "name": "David Lee",
+      "age": 16,
+      "gradeLevel": 10,
+      "subjects": [
+        {"name": "Math", "score": 60},
+        {"name": "Science", "score": 72},
+        {"name": "History", "score": 68},
+        {"name": "English", "score": 70}
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Emma Brown",
+      "age": 15,
+      "gradeLevel": 9,
+      "subjects": [
+        {"name": "Math", "score": 88},
+        {"name": "Science", "score": 85},
+        {"name": "History", "score": 90},
+        {"name": "English", "score": 87}
+      ]
+    }
+  ]
+}

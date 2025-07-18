@@ -1,0 +1,142 @@
+{
+  "books": [
+    {
+      "id": 101,
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "genre": "Fiction",
+      "publicationYear": 1925,
+      "isAvailable": true,
+      "borrowedBy": null
+    },
+    {
+      "id": 102,
+      "title": "1984",
+      "author": "George Orwell",
+      "genre": "Dystopian",
+      "publicationYear": 1949,
+      "isAvailable": false,
+      "borrowedBy": "Jane Doe"
+    },
+    {
+      "id": 103,
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "genre": "Fiction",
+      "publicationYear": 1960,
+      "isAvailable": true,
+      "borrowedBy": null
+    },
+    {
+      "id": 104,
+      "title": "A Brief History of Time",
+      "author": "Stephen Hawking",
+      "genre": "Non-Fiction",
+      "publicationYear": 1988,
+      "isAvailable": true,
+      "borrowedBy": null
+    },
+    {
+      "id": 105,
+      "title": "Dune",
+      "author": "Frank Herbert",
+      "genre": "Science Fiction",
+      "publicationYear": 1965,
+      "isAvailable": false,
+      "borrowedBy": "John Smith"
+    },
+    {
+      "id": 106,
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "genre": "Romance",
+      "publicationYear": 1813,
+      "isAvailable": true,
+      "borrowedBy": null
+    },
+    {
+      "id": 107,
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "genre": "Fantasy",
+      "publicationYear": 1937,
+      "isAvailable": false,
+      "borrowedBy": "Alice Brown"
+    },
+    {
+      "id": 108,
+      "title": "Sapiens: A Brief History of Humankind",
+      "author": "Yuval Noah Harari",
+      "genre": "Non-Fiction",
+      "publicationYear": 2011,
+      "isAvailable": true,
+      "borrowedBy": null
+    },
+    {
+      "id": 109,
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "genre": "Fiction",
+      "publicationYear": 1951,
+      "isAvailable": false,
+      "borrowedBy": "Mark Wilson"
+    },
+    {
+      "id": 110,
+      "title": "Neuromancer",
+      "author": "William Gibson",
+      "genre": "Science Fiction",
+      "publicationYear": 1984,
+      "isAvailable": true,
+      "borrowedBy": null
+    },
+    {
+      "id": 111,
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "genre": "Fiction",
+      "publicationYear": 1988,
+      "isAvailable": true,
+      "borrowedBy": null
+    },
+    {
+      "id": 112,
+      "title": "Brave New World",
+      "author": "Aldous Huxley",
+      "genre": "Dystopian",
+      "publicationYear": 1932,
+      "isAvailable": false,
+      "borrowedBy": "Emma Davis"
+    },
+    {
+      "id": 113,
+      "title": "The Lord of the Rings",
+      "author": "J.R.R. Tolkien",
+      "genre": "Fantasy",
+      "publicationYear": 1954,
+      "isAvailable": true,
+      "borrowedBy": null
+    },
+    {
+      "id": 114,
+      "title": "Educated",
+      "author": "Tara Westover",
+      "genre": "Non-Fiction",
+      "publicationYear": 2018,
+      "isAvailable": false,
+      "borrowedBy": "Sarah Lee"
+    },
+    {
+      "id": 115,
+      "title": "The Martian",
+      "author": "Andy Weir",
+      "genre": "Science Fiction",
+      "publicationYear": 2011,
+      "isAvailable": true,
+      "borrowedBy": null
+    }
+  ]
+}
+
+
+

@@ -1,0 +1,1 @@
+https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=ru&dt=t&q=hello world
